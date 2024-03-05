@@ -23,6 +23,9 @@ class CustomThemes {
   static TextStyle greyColor92ColorTextTheme(context) =>
       Theme.of(context).textTheme.labelMedium!;
 
+  static TextStyle greyColor34ColorTextTheme(context) =>
+      Theme.of(context).textTheme.headlineLarge!;
+
   static TextStyle greyColorC6ColorTextTheme(context) =>
       Theme.of(context).textTheme.labelSmall!;
 

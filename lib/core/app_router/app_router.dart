@@ -12,7 +12,7 @@ import 'package:iron/presentation/screens/intro_screens/splash_screen.dart';
 import 'package:iron/presentation/screens/intro_screens/welcome_screen.dart';
 
 import '../../presentation/screens/cart_and_payment_screens/payment_methods_screen.dart';
-import '../../presentation/screens/product_details_screen/product_details_screen.dart';
+import '../../presentation/screens/products_screen/product_details_screen.dart';
 import '../../presentation/screens/products_screen/products_screen.dart';
 import '../../presentation/screens/profile_screen/profile_screen.dart';
 

@@ -34,5 +34,7 @@ class SvgPath{
   static const phone = "assets/svg/phone.svg";
   static const specialOffer = "assets/svg/specialOffer.svg";
   static const spin = "assets/svg/spin.svg";
+  static const food = "assets/svg/food.svg";
+  static const recommendForYouIcon = "assets/svg/recommendForYouIcon.svg";
   SvgPath._();
 }

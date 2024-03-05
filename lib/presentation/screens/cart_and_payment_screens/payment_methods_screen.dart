@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iron/core/app_theme/app_colors.dart';
-import 'package:iron/presentation/screens/product_details_screen/product_details_screen.dart';
+import 'package:iron/presentation/screens/products_screen/product_details_screen.dart';
 import 'package:iron/presentation/widgets/shared_widget/custom_sized_box.dart';
 
+import '../../widgets/shared_widget/custom_divider.dart';
 import '../../../core/app_theme/custom_themes.dart';
 import '../../../core/assets_path/images_path.dart';
 import '../../../core/enums/payment_method_enum.dart';

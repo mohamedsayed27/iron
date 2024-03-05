@@ -14,7 +14,7 @@ import 'package:iron/presentation/screens/home_screen/home_screen.dart';
 import 'package:iron/presentation/screens/intro_screens/splash_screen.dart';
 import 'package:iron/presentation/screens/intro_screens/welcome_screen.dart';
 import 'package:iron/presentation/screens/main_layout_screen/main_layout_screen.dart';
-import 'package:iron/presentation/screens/product_details_screen/product_details_screen.dart';
+import 'package:iron/presentation/screens/products_screen/product_details_screen.dart';
 import 'package:iron/presentation/screens/products_screen/products_screen.dart';
 import 'package:iron/presentation/screens/profile_screen/profile_screen.dart';
 import 'package:iron/try.dart';
@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
           theme: AppTheme.lightTheme,
           // onGenerateRoute: AppRouter.generateRoute,
           // initialRoute: ScreenName.splashScreen,
-          home: HomeScreen(),
+          home: ProductsScreen(),
         );
       },
     );

@@ -247,8 +247,11 @@ class HomeScreen extends StatelessWidget {
                   ),
                   Expanded(
                     child: InkWell(
-                      onTap: (){
-                        showDialog(context: context, builder: (_)=>FortuneWheelDialog());
+                      onTap: () {
+                        showDialog(
+                          context: context,
+                          builder: (_) => FortuneWheelDialog(),
+                        );
                       },
                       child: Image.asset(
                         ImagesPath.spin,
@@ -311,8 +314,9 @@ class StoryItemComponent extends StatelessWidget {
             child: ListView.separated(
               scrollDirection: Axis.horizontal,
               itemBuilder: (_, index) => InkWell(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (_)=>StoryViewScreen()));
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => StoryViewScreen()));
                 },
                 child: Container(
                   height: 53.h,
@@ -331,7 +335,10 @@ class StoryItemComponent extends StatelessWidget {
                     decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                     ),
-                    child: Image.asset(ImagesPath.welcomeScreenImage,fit: BoxFit.cover,),
+                    child: Image.asset(
+                      ImagesPath.welcomeScreenImage,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
               ),
@@ -349,8 +356,7 @@ class StoryItemComponent extends StatelessWidget {
           height: 53.h,
           width: 53.w,
           decoration: const BoxDecoration(
-              color: AppColors.lightYellowColor,
-              shape: BoxShape.circle),
+              color: AppColors.lightYellowColor, shape: BoxShape.circle),
           alignment: Alignment.center,
           child: SvgPicture.asset(
             SvgPath.plusStory,

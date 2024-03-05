@@ -92,6 +92,10 @@ class AppTheme{
       bodySmall: TextStyle(
         color: AppColors.redColor,
         fontFamily: FontsPath.pantonTrail,
+      ),
+      headlineLarge: TextStyle(
+        color: AppColors.greyColor34,
+        fontFamily: FontsPath.pantonTrail,
       )
     ),
   );

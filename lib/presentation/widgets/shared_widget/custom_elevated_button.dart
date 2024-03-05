@@ -17,7 +17,7 @@ class CustomElevatedButton extends StatelessWidget {
   final Widget? child;
   final String? text;
   final TextStyle? titleStyle;
-
+  final Size? maximumSize;
   const CustomElevatedButton({
     super.key,
     this.width,
@@ -30,7 +30,7 @@ class CustomElevatedButton extends StatelessWidget {
     this.borderRadiusValue = 8,
     this.titleStyle,
     this.elevation,
-    this.padding, this.borderRadius,
+    this.padding, this.borderRadius, this.maximumSize,
   });
 
   @override
@@ -45,6 +45,7 @@ class CustomElevatedButton extends StatelessWidget {
           disabledBackgroundColor: AppColors.greyColorC6,
           backgroundColor: backgroundColor,
           elevation: elevation,
+          maximumSize: maximumSize,
           padding: padding,
           shadowColor: Colors.transparent,
           shape: RoundedRectangleBorder(
