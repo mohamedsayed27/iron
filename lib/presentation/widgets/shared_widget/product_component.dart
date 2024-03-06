@@ -33,6 +33,23 @@ class ProductComponent extends StatelessWidget {
               ),
             ),
             PositionedDirectional(
+              top: 0,
+              start: 0,
+              child: CustomSizedBox(
+                height: 30,
+                width: 30,
+                child: IconButton(
+                  onPressed: () {},
+                  icon: SvgPicture.asset(
+                    SvgPath.heart,
+                    width: 16.w,
+                    height: 16.h,
+                  ),
+                  style: IconButton.styleFrom(padding: EdgeInsets.zero),
+                ),
+              ),
+            ),
+            PositionedDirectional(
               end: -2.w,
               bottom: -1.h,
               child: SizedBox(
@@ -48,7 +65,13 @@ class ProductComponent extends StatelessWidget {
                     foregroundColor: AppColors.whiteColor,
                   ),
                   child: Center(
-                    child: SvgPicture.asset(SvgPath.plus,colorFilter: const ColorFilter.mode(AppColors.whiteColor, BlendMode.srcIn),height: 20.h,width: 20.w,),
+                    child: SvgPicture.asset(
+                      SvgPath.plus,
+                      colorFilter: const ColorFilter.mode(
+                          AppColors.whiteColor, BlendMode.srcIn),
+                      height: 20.h,
+                      width: 20.w,
+                    ),
                   ),
                 ),
               ),

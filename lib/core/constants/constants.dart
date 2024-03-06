@@ -41,3 +41,4 @@ double calculateTextSize(BuildContext context, double baseSize) {
   double textScaleFactor = MediaQuery.of(context).textScaleFactor;
   return baseSize * screenWidth / 375 * textScaleFactor;
 }
+Size preferredSize = AppBar().preferredSize;

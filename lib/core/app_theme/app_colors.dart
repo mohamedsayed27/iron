@@ -22,6 +22,7 @@ class AppColors {
   }
 
   static const primaryColor = Color(0xff197CC1);
+  static  shadowColor({double value = 0.1}) => blackColor.withOpacity(value);
   static const whiteColor = Color(0xffFFFFFF);
   static const lightBabyBlueColor = Color(0xffD1E5F2);
   static const lightYellowColor = Color(0xffFEF2D2);

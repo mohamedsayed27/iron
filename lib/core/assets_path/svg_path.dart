@@ -36,5 +36,13 @@ class SvgPath{
   static const spin = "assets/svg/spin.svg";
   static const food = "assets/svg/food.svg";
   static const recommendForYouIcon = "assets/svg/recommendForYouIcon.svg";
+  static const pastOrders = "assets/svg/pastOrders.svg";
+  static const deliveredStepperFill = "assets/svg/deliveredStepperFill.svg";
+  static const orderPlacedStepperFill = "assets/svg/orderPlacedStepperFill.svg";
+  static const outForStepperFill = "assets/svg/outForStepperFill.svg";
+  static const preparingStepperFill = "assets/svg/preparingStepperFill.svg";
+  static const delivered = "assets/svg/delivered.svg";
+  static const outForDelivery = "assets/svg/outForDelivery.svg";
+  static const preparingStepper = "assets/svg/preparingStepper.svg";
   SvgPath._();
 }

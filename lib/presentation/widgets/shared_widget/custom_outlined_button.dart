@@ -7,6 +7,7 @@ class CustomOutlinedButton extends StatelessWidget {
   final double? width;
   final double? height;
   final double? elevation;
+  final double? borderWidth;
   final double borderRadius;
   final Color borderColor;
   final Color? foregroundColor;
@@ -29,7 +30,7 @@ class CustomOutlinedButton extends StatelessWidget {
     required this.borderRadius,
     this.style,
     this.elevation,
-    this.padding, this.backgroundColor,
+    this.padding, this.backgroundColor, this.borderWidth,
   });
 
   @override
@@ -45,7 +46,7 @@ class CustomOutlinedButton extends StatelessWidget {
           elevation: elevation,
           padding: padding,
           shadowColor: Colors.transparent,
-          side: BorderSide(color: borderColor, width: 1.5.w),
+          side: BorderSide(color: borderColor, width: borderWidth?.w??1.5.w),
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(borderRadius.r),),
         ),
