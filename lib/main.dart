@@ -18,6 +18,7 @@ import 'package:iron/presentation/screens/orders_screen/track_your_order_screen.
 import 'package:iron/presentation/screens/products_screen/product_details_screen.dart';
 import 'package:iron/presentation/screens/products_screen/products_screen.dart';
 import 'package:iron/presentation/screens/profile_screen/profile_screen.dart';
+import 'package:iron/presentation/screens/wallet_screen/wallet_screen.dart';
 import 'package:iron/try.dart';
 
 import 'core/app_theme/app_theme.dart';
@@ -40,7 +41,7 @@ class MyApp extends StatelessWidget {
           theme: AppTheme.lightTheme,
           // onGenerateRoute: AppRouter.generateRoute,
           // initialRoute: ScreenName.splashScreen,
-          home: TracKYourScreen(),
+          home: WalletScreen(),
         );
       },
     );

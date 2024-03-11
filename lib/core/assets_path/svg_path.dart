@@ -40,9 +40,12 @@ class SvgPath{
   static const deliveredStepperFill = "assets/svg/deliveredStepperFill.svg";
   static const orderPlacedStepperFill = "assets/svg/orderPlacedStepperFill.svg";
   static const outForStepperFill = "assets/svg/outForStepperFill.svg";
-  static const preparingStepperFill = "assets/svg/preparingStepperFill.svg";
+  static const preparingStepperFill = "assets/svg/preparingOrderStepperFill.svg";
   static const delivered = "assets/svg/delivered.svg";
   static const outForDelivery = "assets/svg/outForDelivery.svg";
   static const preparingStepper = "assets/svg/preparingStepper.svg";
+  static const chip = "assets/svg/chip.svg";
+  static const masterCard = "assets/svg/masterCard.svg";
+  static const wifi = "assets/svg/wifi.svg";
   SvgPath._();
 }

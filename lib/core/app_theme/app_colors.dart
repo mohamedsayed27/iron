@@ -46,6 +46,8 @@ class AppColors {
   static const darkColo12r = Color(0xff124F7A);
   static const searchIconColor = Color(0xff5E5E6D);
   static const darkTextColor19 = Color(0xff136DAD);
+  static const gradientColorContainer1 = Color(0xff0DA6C2);
+  static const gradientColorContainer2 = Color(0xff0E39C6);
 
 
   static const wheelColor1 = Color(0xff58BAFF);

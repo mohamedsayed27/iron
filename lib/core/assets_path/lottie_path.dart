@@ -1,3 +1,3 @@
 class LottiePath{
-  static const doneLottiePath = 'assets/lottie/lottieDone.json';
+  static const doneLottiePath = 'assets/lottie/lottie.json';
 }
