@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iron/core/app_router/screens_name.dart';
+import 'package:iron/presentation/screens/address_screen/saved_address_screen.dart';
 import 'package:iron/presentation/screens/auth_screens/create_accout_screen.dart';
 import 'package:iron/presentation/screens/auth_screens/new_password_screen.dart';
 import 'package:iron/presentation/screens/auth_screens/reset_password_screen.dart';
@@ -10,8 +11,13 @@ import 'package:iron/presentation/screens/cart_and_payment_screens/cart_screen.d
 import 'package:iron/presentation/screens/intro_screens/onboarding_screen.dart';
 import 'package:iron/presentation/screens/intro_screens/splash_screen.dart';
 import 'package:iron/presentation/screens/intro_screens/welcome_screen.dart';
+import 'package:iron/presentation/screens/products_screen/wish_list_screen.dart';
+import 'package:iron/presentation/screens/profile_screen/edit_profile_screen.dart';
+import 'package:iron/presentation/screens/wallet_screen/wallet_screen.dart';
 
 import '../../presentation/screens/cart_and_payment_screens/payment_methods_screen.dart';
+import '../../presentation/screens/orders_screen/track_your_order_screen.dart';
+import '../../presentation/screens/orders_screen/your_orders_screen.dart';
 import '../../presentation/screens/products_screen/product_details_screen.dart';
 import '../../presentation/screens/products_screen/products_screen.dart';
 import '../../presentation/screens/profile_screen/profile_screen.dart';
@@ -48,6 +54,18 @@ class AppRouter {
           return MaterialPageRoute(builder: (_) => const ProductsScreen());
         case ScreenName.profileScreen:
           return MaterialPageRoute(builder: (_) => const ProfileScreen());
+        case ScreenName.editProfileScreen:
+          return MaterialPageRoute(builder: (_) => const EditProfileScreen());
+        case ScreenName.walletScreen:
+          return MaterialPageRoute(builder: (_) => const WalletScreen());
+        case ScreenName.myOrdersScreen:
+          return MaterialPageRoute(builder: (_) => const YourOrdersScreen());
+        case ScreenName.wishListScreen:
+          return MaterialPageRoute(builder: (_) => const WishListScreen());
+        case ScreenName.savedAddress:
+          return MaterialPageRoute(builder: (_) => const SavedAddressScreen());
+        case ScreenName.trackYourOrderScreen:
+          return MaterialPageRoute(builder: (_) => const TracKYourScreen());
         default:
           return _errorRoute();
       }

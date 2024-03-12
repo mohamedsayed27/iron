@@ -193,7 +193,8 @@ class _SubCategoriesTabBarState extends State<SubCategoriesTabBar> {
 
 
 class ProductsGridComponent extends StatelessWidget {
-  const ProductsGridComponent({super.key});
+  final bool isFavorite;
+  const ProductsGridComponent({super.key, this.isFavorite = false});
 
   @override
   Widget build(BuildContext context) {
@@ -206,7 +207,7 @@ class ProductsGridComponent extends StatelessWidget {
         crossAxisSpacing: 14.w,
       ),
       itemBuilder: (_, index) {
-        return const ProductComponent();
+        return ProductComponent(isFavorite: isFavorite,);
       },
       itemCount: 15,
     );

@@ -42,6 +42,7 @@ class AppColors {
   static const dividerColor = Color(0xffE1E1E1);
   static const randomColor = Color(0xfff3f3f3);
   static const yellowColor = Color(0xffFBBD1E);
+  static const greenColor = Color(0xff00B833);
   static const greyColor4E = Color(0xff4E4E4E);
   static const darkColo12r = Color(0xff124F7A);
   static const searchIconColor = Color(0xff5E5E6D);

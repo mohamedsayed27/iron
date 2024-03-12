@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:iron/core/app_theme/app_colors.dart';
 import 'package:iron/core/app_theme/custom_themes.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -7,6 +8,7 @@ class CustomAppBar extends StatelessWidget {
   final double? elevation;
   final double? fontSize;
   final bool centerTitle;
+  final Color backgroundColor;
   final FontWeight? fontWeight;
 
   const CustomAppBar({
@@ -15,12 +17,13 @@ class CustomAppBar extends StatelessWidget {
     this.elevation,
     this.centerTitle = false,
     this.fontSize,
-    this.fontWeight,
+    this.fontWeight, this.backgroundColor = AppColors.whiteColor,
   });
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      backgroundColor: backgroundColor,
       elevation: elevation??0,
       centerTitle: centerTitle,
       title: Text(

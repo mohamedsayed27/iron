@@ -47,5 +47,9 @@ class SvgPath{
   static const chip = "assets/svg/chip.svg";
   static const masterCard = "assets/svg/masterCard.svg";
   static const wifi = "assets/svg/wifi.svg";
+  static const checkIcon = "assets/svg/checkIcon.svg";
+  static const rotateLeftIcon = "assets/svg/rotateLeftIcon.svg";
+  static const fillHeart = "assets/svg/fillHeart.svg";
+  static const locationAddress = "assets/svg/locationAddress.svg";
   SvgPath._();
 }

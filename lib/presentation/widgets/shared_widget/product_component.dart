@@ -9,7 +9,8 @@ import '../../../core/app_theme/app_colors.dart';
 import '../../../core/assets_path/svg_path.dart';
 
 class ProductComponent extends StatelessWidget {
-  const ProductComponent({super.key});
+  final bool isFavorite;
+  const ProductComponent({super.key,this.isFavorite = false});
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +42,7 @@ class ProductComponent extends StatelessWidget {
                 child: IconButton(
                   onPressed: () {},
                   icon: SvgPicture.asset(
-                    SvgPath.heart,
+                    isFavorite?SvgPath.fillHeart:SvgPath.heart,
                     width: 16.w,
                     height: 16.h,
                   ),
