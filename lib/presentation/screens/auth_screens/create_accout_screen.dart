@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:iron/core/app_router/screens_name.dart';
 import 'package:iron/core/constants/extensions.dart';
 import 'package:iron/presentation/widgets/shared_widget/custom_sized_box.dart';
 
@@ -70,7 +71,9 @@ class CreateAccountScreen extends StatelessWidget {
               borderRadiusValue: 12,
               backgroundColor: AppColors.primaryColor,
               foregroundColor: AppColors.whiteColor,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, ScreenName.otpScreen);
+              },
               width: double.infinity,
               elevation: 0,
               text: "Sign Up",
@@ -117,7 +120,9 @@ class CreateAccountScreen extends StatelessWidget {
               height: 36,
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushReplacementNamed(context, ScreenName.loginScreen);
+              },
               borderRadius: BorderRadius.circular(8.r),
               child: Row(
                 mainAxisSize: MainAxisSize.min,

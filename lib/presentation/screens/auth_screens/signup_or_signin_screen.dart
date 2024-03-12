@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:iron/core/app_router/screens_name.dart';
 import 'package:iron/core/constants/extensions.dart';
 import 'package:iron/presentation/widgets/shared_widget/custom_sized_box.dart';
 
@@ -31,7 +32,9 @@ class SignUpOrSignInScreen extends StatelessWidget {
               borderRadiusValue: 12,
               backgroundColor: AppColors.primaryColor,
               foregroundColor: AppColors.whiteColor,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, ScreenName.loginScreen);
+              },
               width: double.infinity,
               elevation: 0,
               text: "Sign In",
@@ -44,7 +47,9 @@ class SignUpOrSignInScreen extends StatelessWidget {
               borderRadiusValue: 12,
               backgroundColor: AppColors.primaryColor,
               foregroundColor: AppColors.whiteColor,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, ScreenName.registerScreen);
+              },
               width: double.infinity,
               elevation: 0,
               text: "Sign Up",

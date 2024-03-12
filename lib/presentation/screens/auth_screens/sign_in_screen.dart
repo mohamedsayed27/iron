@@ -6,6 +6,7 @@ import 'package:iron/core/constants/extensions.dart';
 import 'package:iron/presentation/widgets/shared_widget/custom_outlined_button.dart';
 import 'package:iron/presentation/widgets/shared_widget/custom_sized_box.dart';
 
+import '../../../core/app_router/screens_name.dart';
 import '../../../core/app_theme/app_colors.dart';
 import '../../../core/app_theme/custom_themes.dart';
 import '../../widgets/auth_widgets/password_form_field.dart';
@@ -49,7 +50,10 @@ class SignInScreen extends StatelessWidget {
               hintText: "Password",
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+
+                Navigator.pushNamed(context, ScreenName.forgotPasswordScreen);
+              },
               style: TextButton.styleFrom(padding: EdgeInsets.zero),
               child: Text(
                 "Forgot your password?",
@@ -69,7 +73,9 @@ class SignInScreen extends StatelessWidget {
               borderRadiusValue: 12,
               backgroundColor: AppColors.primaryColor,
               foregroundColor: AppColors.whiteColor,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, ScreenName.mainLayoutScreen);
+              },
               width: double.infinity,
               elevation: 0,
               text: "Sign In",

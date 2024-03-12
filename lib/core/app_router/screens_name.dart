@@ -1,9 +1,10 @@
-class ScreenName{
-static const splashScreen = "splashScreen";
+class ScreenName {
+  static const splashScreen = "splashScreen";
   static const onboardingScreen = "onboardingScreen";
   static const welcomeScreen = "welcomeScreen";
   static const signUpOrSignInScreen = "signUpOrSignInScreen";
   static const loginScreen = "loginScreen";
+  static const mainLayoutScreen = "mainLayoutScreen";
   static const registerScreen = "registerScreen";
   static const otpScreen = "otpScreen";
   static const forgotPasswordScreen = "forgotPasswordScreen";

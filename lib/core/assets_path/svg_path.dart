@@ -51,5 +51,7 @@ class SvgPath{
   static const rotateLeftIcon = "assets/svg/rotateLeftIcon.svg";
   static const fillHeart = "assets/svg/fillHeart.svg";
   static const locationAddress = "assets/svg/locationAddress.svg";
+  static const heartOutlined = "assets/svg/heartOutlined.svg";
+  static const homeLocation = "assets/svg/homeLocation.svg";
   SvgPath._();
 }

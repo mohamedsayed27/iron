@@ -15,19 +15,29 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  _loading() {
-    Timer(
-      const Duration(seconds: 2),
-      () {
-        Navigator.pushReplacementNamed(context, ScreenName.welcomeScreen);
-      },
-    );
-  }
+  bool isLoading = false;
 
   @override
   void initState() {
-    _loading();
+    Timer(
+      const Duration(seconds: 1),
+          () {
+        setState(() =>isLoading = true);
+        _loading();
+      },
+    );
     super.initState();
+  }
+
+  _loading(){
+
+    Timer(
+      const Duration(seconds: 2),
+          () {
+        Navigator.pushReplacementNamed(context, ScreenName.welcomeScreen);
+      },
+    );
+
   }
 
   @override
@@ -35,10 +45,16 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: AppColors.primaryColor,
       body: Center(
-        child: SvgPicture.asset(
-          SvgPath.whiteLogo,
-          width: 158.w,
-          height: 74.h,
+        child: AnimatedOpacity(
+          opacity: isLoading ? 1.0 : 0.0,
+          duration: const Duration(
+            seconds: 2,
+          ),
+          child: SvgPicture.asset(
+            SvgPath.whiteLogo,
+            width: 158.w,
+            height: 74.h,
+          ),
         ),
       ),
     );

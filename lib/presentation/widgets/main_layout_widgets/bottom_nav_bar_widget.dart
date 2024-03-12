@@ -86,7 +86,9 @@ class _BottomNavBarWidgetState extends State<BottomNavBarWidget> {
             isSelected: currentIndex == 4,
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, ScreenName.profileScreen);
+            },
             style: IconButton.styleFrom(padding: EdgeInsets.zero),
             icon: Container(
               height: 40.h,

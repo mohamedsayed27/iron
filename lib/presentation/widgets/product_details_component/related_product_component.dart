@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:iron/core/app_router/screens_name.dart';
 import 'package:iron/core/assets_path/images_path.dart';
 
 import '../../../core/app_theme/custom_themes.dart';
@@ -43,7 +44,11 @@ class RelatedProduct extends StatelessWidget {
           height: 185.h,
           child: ListView.separated(
             scrollDirection: Axis.horizontal,
-            itemBuilder: (_, index) => const ProductComponent(),
+            itemBuilder: (_, index) => InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, ScreenName.productDetailsScreen);
+                },
+                child: const ProductComponent()),
             separatorBuilder: (_, index) => const CustomSizedBox(
               width: 14,
             ),

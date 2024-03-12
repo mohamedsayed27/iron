@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:iron/core/app_router/screens_name.dart';
 import 'package:iron/core/app_theme/app_colors.dart';
 import 'package:iron/core/assets_path/svg_path.dart';
 import 'package:iron/presentation/screens/products_screen/product_details_screen.dart';
@@ -11,6 +12,7 @@ import '../../widgets/profile_background_widget/profile_background_widget.dart';
 import '../../widgets/shared_widget/custom_elevated_button.dart';
 
 import '../../widgets/shared_widget/custom_divider.dart';
+
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({
     super.key,
@@ -37,7 +39,12 @@ class ProfileScreen extends StatelessWidget {
         isEditProfile: false,
         children: [
           TabItemWidget(
-              iconPath: SvgPath.wallet, title: "Wallet", onPressed: () {}),
+            iconPath: SvgPath.wallet,
+            title: "Wallet",
+            onPressed: () {
+              Navigator.pushNamed(context, ScreenName.walletScreen);
+            },
+          ),
           const CustomDivider(
             color: AppColors.primaryColor,
             height: 1,
@@ -45,7 +52,9 @@ class ProfileScreen extends StatelessWidget {
           TabItemWidget(
             iconPath: SvgPath.myOrders,
             title: "My Orders",
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, ScreenName.myOrdersScreen);
+            },
           ),
           const CustomDivider(
             color: AppColors.primaryColor,
@@ -54,16 +63,20 @@ class ProfileScreen extends StatelessWidget {
           TabItemWidget(
             iconPath: SvgPath.accountInfo,
             title: "Account info",
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, ScreenName.editProfileScreen);
+            },
           ),
           const CustomDivider(
             color: AppColors.primaryColor,
             height: 1,
           ),
           TabItemWidget(
-            iconPath: SvgPath.heart,
+            iconPath: SvgPath.heartOutlined,
             title: "Wishlist",
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, ScreenName.wishListScreen);
+            },
           ),
           const CustomDivider(
             color: AppColors.primaryColor,
@@ -72,7 +85,9 @@ class ProfileScreen extends StatelessWidget {
           TabItemWidget(
             iconPath: SvgPath.savedAddress,
             title: "Saved addresses",
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, ScreenName.savedAddress);
+            },
           ),
           const CustomDivider(
             color: AppColors.primaryColor,
@@ -88,7 +103,10 @@ class ProfileScreen extends StatelessWidget {
           ),
           CustomElevatedButton(
             text: "Logout",
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamedAndRemoveUntil(
+                  context, ScreenName.loginScreen, (route) => false);
+            },
             width: double.infinity,
             borderRadius: BorderRadius.circular(12.r),
             backgroundColor: AppColors.primaryColor,

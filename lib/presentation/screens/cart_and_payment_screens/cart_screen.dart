@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:iron/core/app_router/screens_name.dart';
 import 'package:iron/core/assets_path/svg_path.dart';
 import 'package:iron/core/constants/extensions.dart';
 import 'package:iron/presentation/widgets/shared_widget/component_title_header_widget.dart';
@@ -63,7 +64,9 @@ class CartScreen extends StatelessWidget {
           ),
           CustomElevatedButton(
             text: "Payment method",
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, ScreenName.paymentMethodsScreen);
+            },
             width: double.infinity,
             borderRadius: BorderRadius.circular(12.r),
             backgroundColor: AppColors.primaryColor,

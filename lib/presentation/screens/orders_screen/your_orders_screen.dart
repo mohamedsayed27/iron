@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:iron/core/app_router/screens_name.dart';
 import 'package:iron/core/assets_path/svg_path.dart';
 import 'package:iron/core/constants/extensions.dart';
 import 'package:iron/presentation/widgets/shared_widget/custom_sized_box.dart';
@@ -80,104 +81,109 @@ class OrderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Container(
-          height: 104.h,
-          width: 96.w,
-          clipBehavior: Clip.antiAlias,
-          decoration: BoxDecoration(
-            color: AppColors.lightBabyBlueColor,
-            borderRadius: BorderRadius.circular(12.r),
+    return InkWell(
+      onTap: (){
+        Navigator.pushNamed(context, ScreenName.trackYourOrderScreen);
+      },
+      child: Row(
+        children: [
+          Container(
+            height: 104.h,
+            width: 96.w,
+            clipBehavior: Clip.antiAlias,
+            decoration: BoxDecoration(
+              color: AppColors.lightBabyBlueColor,
+              borderRadius: BorderRadius.circular(12.r),
+            ),
+            child: Image.asset(
+              ImagesPath.productDummyImage,
+              fit: BoxFit.contain,
+            ),
           ),
-          child: Image.asset(
-            ImagesPath.productDummyImage,
-            fit: BoxFit.contain,
+          const CustomSizedBox(
+            width: 16,
           ),
-        ),
-        const CustomSizedBox(
-          width: 16,
-        ),
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "Product Name",
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: CustomThemes.darkColor12TextTheme(context).copyWith(
-                  fontSize: 16.sp,
-                  fontWeight: FontWeight.w600,
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Product Name",
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: CustomThemes.darkColor12TextTheme(context).copyWith(
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Text(
-                    status,
-                    style: CustomThemes.primaryColorTextTheme(context).copyWith(
-                      fontSize: 16.sp,
-                      color: isDelivered ? AppColors.greenColor : null,
-                      fontWeight: FontWeight.w400,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      status,
+                      style: CustomThemes.primaryColorTextTheme(context).copyWith(
+                        fontSize: 16.sp,
+                        color: isDelivered ? AppColors.greenColor : null,
+                        fontWeight: FontWeight.w400,
+                      ),
                     ),
-                  ),
-                  const CustomSizedBox(
-                    width: 8,
-                  ),
-                  if (isDelivered)
-                    SvgPicture.asset(
-                      SvgPath.checkIcon,
-                      width: 14.w,
-                      height: 14.h,
+                    const CustomSizedBox(
+                      width: 8,
                     ),
-                ],
-              ),
-              Text(
-                "Order date and time",
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: CustomThemes.greyColor49ColorTextTheme(context).copyWith(
-                  fontSize: 14.sp,
-                  fontWeight: FontWeight.w400,
+                    if (isDelivered)
+                      SvgPicture.asset(
+                        SvgPath.checkIcon,
+                        width: 14.w,
+                        height: 14.h,
+                      ),
+                  ],
                 ),
-              ),
-              Text(
-                "Order ID: 1234567891",
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: CustomThemes.greyColor49ColorTextTheme(context).copyWith(
-                  fontSize: 14.sp,
-                  fontWeight: FontWeight.w400,
+                Text(
+                  "Order date and time",
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: CustomThemes.greyColor49ColorTextTheme(context).copyWith(
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w400,
+                  ),
                 ),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Text(
-                    action,
-                    style: CustomThemes.redTextStyle(context).copyWith(
-                      fontSize: 16.sp,
-                      color: isDelivered ? AppColors.yellowColor : null,
-                      fontWeight: FontWeight.w600,
-                    ),
+                Text(
+                  "Order ID: 1234567891",
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: CustomThemes.greyColor49ColorTextTheme(context).copyWith(
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w400,
                   ),
-                  const CustomSizedBox(
-                    width: 8,
-                  ),
-                  if (isDelivered)
-                    SvgPicture.asset(
-                      SvgPath.rotateLeftIcon,
-                      width: 14.w,
-                      height: 14.h,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      action,
+                      style: CustomThemes.redTextStyle(context).copyWith(
+                        fontSize: 16.sp,
+                        color: isDelivered ? AppColors.yellowColor : null,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
-                ],
-              ),
-            ],
-          ),
-        )
-      ],
+                    const CustomSizedBox(
+                      width: 8,
+                    ),
+                    if (isDelivered)
+                      SvgPicture.asset(
+                        SvgPath.rotateLeftIcon,
+                        width: 14.w,
+                        height: 14.h,
+                      ),
+                  ],
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }

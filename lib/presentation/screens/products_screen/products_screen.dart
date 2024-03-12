@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:iron/core/app_router/screens_name.dart';
 import 'package:iron/core/app_theme/custom_themes.dart';
 import 'package:iron/presentation/widgets/shared_widget/custom_elevated_button.dart';
 import 'package:iron/presentation/widgets/shared_widget/custom_sized_box.dart';
@@ -207,7 +208,9 @@ class ProductsGridComponent extends StatelessWidget {
         crossAxisSpacing: 14.w,
       ),
       itemBuilder: (_, index) {
-        return ProductComponent(isFavorite: isFavorite,);
+        return InkWell(onTap: (){
+          Navigator.pushNamed(context, ScreenName.productDetailsScreen);
+        },child: ProductComponent(isFavorite: isFavorite,));
       },
       itemCount: 15,
     );

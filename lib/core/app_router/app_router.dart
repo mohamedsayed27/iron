@@ -11,6 +11,7 @@ import 'package:iron/presentation/screens/cart_and_payment_screens/cart_screen.d
 import 'package:iron/presentation/screens/intro_screens/onboarding_screen.dart';
 import 'package:iron/presentation/screens/intro_screens/splash_screen.dart';
 import 'package:iron/presentation/screens/intro_screens/welcome_screen.dart';
+import 'package:iron/presentation/screens/main_layout_screen/main_layout_screen.dart';
 import 'package:iron/presentation/screens/products_screen/wish_list_screen.dart';
 import 'package:iron/presentation/screens/profile_screen/edit_profile_screen.dart';
 import 'package:iron/presentation/screens/wallet_screen/wallet_screen.dart';
@@ -34,6 +35,8 @@ class AppRouter {
           return MaterialPageRoute(builder: (_) => const WelcomeScreen());
         case ScreenName.signUpOrSignInScreen:
           return MaterialPageRoute(builder: (_) => const SignUpOrSignInScreen());
+        case ScreenName.mainLayoutScreen:
+          return MaterialPageRoute(builder: (_) => const MainLayoutScreen());
         case ScreenName.loginScreen:
           return MaterialPageRoute(builder: (_) => const SignInScreen());
         case ScreenName.registerScreen:

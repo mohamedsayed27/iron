@@ -94,7 +94,9 @@ class _TracKYourScreenState extends State<TracKYourScreen> {
           CustomElevatedButton(
             backgroundColor: AppColors.primaryColor,
             foregroundColor: AppColors.whiteColor,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             borderRadius: BorderRadius.circular(10.r),
             text: "Go to home page",
           ).symmetricPadding(horizontal: 16),
@@ -201,27 +203,21 @@ class StepperWidget extends StatelessWidget {
                 isSelected: currentIndex >= 0,
               ),
             ),
-            const CustomSizedBox(
-              width: 10,
-            ),
+            const CustomSizedBox(width: 8,),
             Expanded(
               child: StepperText(
                 title: "Preparing",
                 isSelected: currentIndex >= 1,
               ),
             ),
-            const CustomSizedBox(
-              width: 16,
-            ),
+            const CustomSizedBox(width: 8,),
             Expanded(
               child: StepperText(
                 title: "Out For Delivery",
                 isSelected: currentIndex >= 2,
               ),
             ),
-            const CustomSizedBox(
-              width: 10,
-            ),
+            const CustomSizedBox(width: 8,),
             Expanded(
               child: StepperText(
                 title: "Deliverd",
